@@ -30,15 +30,16 @@ const port = PORT || 3030;
 //allows express the ability to json parse
 app.use(express.json());
 
+//test get method
+app.get("/", function (req, res) {
+  res.send("Hello from store");
+});
+
 //tells the app of an api endpoint called users
 app.use("/products", products_router);
 app.use("/api/users", user_router);
 app.use("/account", account_router);
 
-//test get method
-app.get("/", function (req, res) {
-  res.send("Hello from store");
-});
 // central error handling
 app.use(error_handler);
 

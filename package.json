@@ -4,7 +4,7 @@
   "description": "",
   "main": "App.js",
   "scripts": {
-    "start": "node App.js"
+    "start": "nodemon App.js"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +19,10 @@
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.16",
-    "nodemon": "^2.0.4",
     "primus": "^7.3.5",
     "sockjs": "^0.3.20",
-    "sockjs-client": "^1.4.0"
-  }
+    "sockjs-client": "^1.4.0",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {}
 }
