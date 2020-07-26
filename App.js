@@ -23,9 +23,9 @@ app.use(cors());
 
 //The process.env property returns an object containing the user environment
 //Then we distructure what we need from that object
-const { PORT, API_HOST } = process.env;
+const { $PORT, API_HOST } = process.env;
 // const port = API_PORT || 3030;
-const port = PORT || 3030;
+const port = $PORT || 3030;
 
 //allows express the ability to json parse
 app.use(express.json());
