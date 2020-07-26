@@ -23,8 +23,9 @@ app.use(cors());
 
 //The process.env property returns an object containing the user environment
 //Then we distructure what we need from that object
-const { API_PORT, API_HOST, DB_URI } = process.env;
-const port = API_PORT || 3000;
+const { PORT, API_HOST } = process.env;
+// const port = API_PORT || 3030;
+const port = PORT || 3030;
 
 //allows express the ability to json parse
 app.use(express.json());
@@ -51,7 +52,8 @@ app.use("*", not_found);
   await db.connect();
   //start listening on a certain port
   let server = await app.listen(port, API_HOST, () => {
-    console.log(`Store app listening on  http://${API_HOST}:${API_PORT} !`);
+    // console.log(`Store app listening on  http://${API_HOST}:${API_PORTAPI_PORT} !`);
+    console.log(`Store app listening on  http://${API_HOST}:${port} !`);
 
     // fs.createReadStream(__dirname + "/public-chat-client.html");
   });
