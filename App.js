@@ -27,6 +27,7 @@ const { PORT, API_HOST } = process.env;
 // const port = API_PORT || 3030;
 console.log("PORT===> ", PORT);
 const port = PORT || 3030;
+const host = "0.0.0.0";
 
 //allows express the ability to json parse
 app.use(express.json());
@@ -53,9 +54,9 @@ app.use("*", not_found);
   //connect to mongo db
   await db.connect();
   //start listening on a certain port
-  let server = await app.listen(port, API_HOST, () => {
+  let server = await app.listen(port, host, () => {
     // console.log(`Store app listening on  http://${API_HOST}:${API_PORTAPI_PORT} !`);
-    console.log(`Store app listening on  http://${API_HOST}:${port} !`);
+    console.log(`Store app listening on  http://${host}:${port} !`);
 
     // fs.createReadStream(__dirname + "/public-chat-client.html");
   });
