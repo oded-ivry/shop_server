@@ -34,7 +34,7 @@ app.use(express.json());
 
 //test get method
 app.get("/", function (req, res) {
-  res.send("Hello from store");
+  res.send("Hello from store ");
 });
 
 //tells the app of an api endpoint called users
