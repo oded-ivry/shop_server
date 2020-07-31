@@ -8,7 +8,9 @@ router.use(express.json());
 const PAGINATIONLIMIT = 9;
 // GET ALL PRODUCTS
 router.get("/all-products", async (req, res) => {
-  const pagination = req.query.pagination ? parseInt(req.query.pagination) : PAGINATIONLIMIT;
+  const pagination = req.query.pagination
+    ? parseInt(req.query.pagination)
+    : PAGINATIONLIMIT;
 
   const page = req.query.page ? parseInt(req.query.page) : 1;
 
