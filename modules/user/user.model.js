@@ -25,7 +25,6 @@ const UserSchema = new Schema({
     type: String,
     required: [true, "Password is required"],
   },
-  user_purchased_items: [],
 });
 
 // UserSchema.methods.generateAuthToken = function () {
